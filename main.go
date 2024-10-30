@@ -11,9 +11,9 @@ func main() {
 	apiInstance := api.ParagrafApi{conf.DefaultConfig.Version, conf.DefaultConfig.ApiLogin, conf.DefaultConfig.ApiPassword, conf.DefaultConfig.ApiBasePath, conf.DefaultConfig.LogPath, ""}
 	apiInstance.UpdateSession()
 	ParagrafBot := bot.TelegramBot{}
-	err := ParagrafBot.Init(conf.MyConfig.TgBotToken, 60, apiInstance)
+	err := ParagrafBot.Init(conf.DefaultConfig.TgBotToken, 60, apiInstance)
 	if err != nil {
-		utils.ErrorHandler(err, conf.MyConfig.LogPath)
+		utils.ErrorHandler(err, conf.DefaultConfig.LogPath)
 	}
 	ParagrafBot.StartTgBot()
 }
