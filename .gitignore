@@ -1,0 +1,4 @@
+conf/*
+logs/*
+!conf/conf.go
+main.go
